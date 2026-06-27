@@ -1,4 +1,4 @@
 /frontend/node_modules/
-.next
-.env.local
-.vercel
+/frontend/.next
+/frontend/.env.local
+/frontend/.vercel
