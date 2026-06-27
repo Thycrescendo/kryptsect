@@ -1,0 +1,4 @@
+import { orderAsks, orderBids } from '@/lib/data';
+export default function OrderBook() {
+  return <div className="rounded-2xl border border-white/10 bg-krypt-panel p-4"><div className="mb-4 flex items-center justify-between"><h2 className="font-bold">Order Book</h2><span className="text-xs text-gray-400">0.01</span></div><div className="grid grid-cols-2 pb-2 text-xs text-gray-500"><span>Price USDT</span><span className="text-right">Amount BTC</span></div><div className="space-y-2 text-sm">{orderAsks.map(([p,a]) => <div key={p} className="flex justify-between text-krypt-red"><span>{p}</span><span>{a}</span></div>)}<div className="rounded-lg bg-white/5 py-3 text-center text-xl font-black text-krypt-gold">69,400.00</div>{orderBids.map(([p,a]) => <div key={p} className="flex justify-between text-krypt-green"><span>{p}</span><span>{a}</span></div>)}</div></div>;
+}
