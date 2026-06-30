@@ -12,6 +12,9 @@
 /frontend/.vercel
 
 
+
+
+/kryptsect_contracts/node_modules
 kryptsect_contracts/.env
 kryptsect_contracts/.env.*
 !kryptsect_contracts/.env.example
@@ -24,12 +27,12 @@ frontend/out/
 
 # Hardhat
 
-kryptsect_contracts/artifacts/
-kryptsect_contracts/cache/
-kryptsect_contracts/typechain/
-kryptsect_contracts/typechain-types/
-kryptsect_contracts/coverage/
-kryptsect_contracts/gas-report.txt
+/kryptsect_contracts/artifacts/
+/kryptsect_contracts/cache/
+/kryptsect_contracts/typechain/
+/kryptsect_contracts/typechain-types/
+/kryptsect_contracts/coverage/
+/kryptsect_contracts/gas-report.txt
 
 *.log
 npm-debug.log*

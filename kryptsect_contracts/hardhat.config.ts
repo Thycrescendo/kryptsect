@@ -18,16 +18,22 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    celoSepolia: {
+    url: process.env.CELO_SEPOLIA_RPC_URL || "https://forno.celo-sepolia.celo-testnet.org",
+    accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    chainId: 11142220,
+  },
+
+  celo: {
+    url: process.env.CELO_RPC_URL || "https://forno.celo.org",
+    accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    chainId: 42220,
+  },
     alfajores: {
-      url: "https://alfajores-forno.celo-testnet.org",
+      url: process.env.ALFAJORES_RPC_URL || "https://alfajores-rpc.celo-community.org",
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
       chainId: 44787,
-      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
-    },
-    celo: {
-      url: "https://forno.celo.org",
-      chainId: 42220,
-      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
-    },
+  },
   },
   etherscan: {
     apiKey: {
